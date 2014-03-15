@@ -1,0 +1,3 @@
+exclude: [".gitignore","README.md"]
+paginate: 5
+timezone: Asia/Tokyo
