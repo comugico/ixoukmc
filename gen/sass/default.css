@@ -3,4 +3,5 @@ html, body {
 
 #wrapper {
   min-height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  overflow-x: hidden; }
