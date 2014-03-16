@@ -1,0 +1,71 @@
+@import "vars.scss";
+
+#home {
+  section {
+    padding:20px;
+    >.container {
+      max-width:$content-max-width;
+      margin:0 auto;
+    }
+  }
+}
+#welcome {
+  min-height:200px;
+}
+#servers {
+  & {
+    color:#fff;
+    background-color:$wetasphalt;
+  }
+  $item-width:200px;
+  $item-height:225px;
+  $item-v-padding:35px;
+  $caption-height:$item-v-padding;
+  $body-height:($item-height - ($item-v-padding * 2));
+  $body-padding:15px;
+  $shot-size:($body-height - ($body-padding * 2));
+  .items {
+    max-width:($item-width * 2);
+    height:$item-height;
+    margin:0 auto;
+    .item {
+      display:block;
+      float:left;
+      width:$item-width;
+      height:$body-height;
+      padding:$item-v-padding 0;
+      position:relative;
+      &:last-child {
+        @include clearfix;
+      }
+      .title {
+        display:block;
+        height:$caption-height;
+        position:absolute;
+        top:auto;
+        left:0;right:0;bottom:0;
+        text-align:center;
+        line-height:$caption-height;
+      }
+      .body {
+        height:($body-height - ($body-padding * 2));
+        padding:$body-padding;
+        .shot {
+          display:block;
+          width:$shot-size;
+          height:$shot-size;
+          margin:0 auto;
+          border-radius:50%;
+          overflow:hidden;
+          & {
+            background-size: cover;
+            background-position: center center;
+          }
+          img {
+            display:none;
+          }
+        }
+      }
+    }
+  }
+}

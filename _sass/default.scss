@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 html,body {
   height:100%;
 }
@@ -5,4 +7,102 @@ html,body {
   min-height:100%;
   overflow:auto;
   overflow-x:hidden;
+  position:relative;
+}
+body {
+  color:#000;
+  background-color:#fff;
+  font-family:'Lucida Grande',
+    'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',
+    'Meiryo','メイリオ',
+    sans-serif;
+}
+
+a {
+  text-decoration:inherit;
+  color:$peterriver;
+}
+h1 {
+  margin:0;
+}
+
+#header,#footer {
+  position:absolute;
+  left:0;right:0;
+}
+#header {
+  height:$header-height;
+  top:0;
+  bottom:auto;
+}
+#main {
+  padding-top:$header-height;
+  padding-bottom:$footer-height;
+}
+#footer {
+  height:$footer-height;
+  top:auto;
+  bottom:0;
+  text-align:center;
+  line-height:$footer-height;
+  font-size:.9em;
+}
+
+#header {
+  color:#fff;
+  background-color:$wetasphalt;
+  #h1 {
+    position:absolute;
+    top:auto;right:auto;
+    left:0;bottom:0;
+    padding:.5em 0;
+    text-shadow:0 1px 3px #000;
+    a {
+      color:inherit;
+    }
+  }
+  .top {
+    position:absolute;
+    top:0;left:0;right:0;
+    bottom:$nav-height;
+    background-image:url(http://www.publicdomainpictures.net/pictures/30000/velka/the-tree-on-the-bank.jpg);
+    background-position:top center;
+    background-size:cover;
+    .container {
+      height:100%;
+      max-width:$content-max-width;
+      margin:0 auto;
+      position:relative;
+    }
+  }
+  #nav {
+    background-color:$midnightblue;
+    position:absolute;
+    top:auto;
+    left:0;right:0;bottom:0;
+    $item-width:100px;
+    .container {
+      height:$nav-height;
+      margin:0 auto;
+      max-width:($item-width * 2);
+    }
+    a {
+      display:block;
+      float:left;
+      color:inherit;
+      line-height:$nav-height;
+      width:$item-width;
+      text-align:center;
+      font-weight:bold;
+      &:last-child {
+        @include clearfix;
+      }
+    }
+  }
+}
+#main {
+  >*>.container {
+    max-width:$content-max-width;
+    margin:0 auto;
+  }
 }

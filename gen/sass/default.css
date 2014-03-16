@@ -1,7 +1,104 @@
+@charset "UTF-8";
 html, body {
   height: 100%; }
 
 #wrapper {
   min-height: 100%;
   overflow: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative; }
+
+body {
+  color: #000;
+  background-color: #fff;
+  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', 'Meiryo','メイリオ', sans-serif; }
+
+a {
+  text-decoration: inherit;
+  color: #3498db; }
+
+h1 {
+  margin: 0; }
+
+#header, #footer {
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+#header {
+  height: 300px;
+  top: 0;
+  bottom: auto; }
+
+#main {
+  padding-top: 300px;
+  padding-bottom: 50px; }
+
+#footer {
+  height: 50px;
+  top: auto;
+  bottom: 0;
+  text-align: center;
+  line-height: 50px;
+  font-size: .9em; }
+
+#header {
+  color: #fff;
+  background-color: #34495e; }
+  #header #h1 {
+    position: absolute;
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: 0;
+    padding: .5em 0;
+    text-shadow: 0 1px 3px #000; }
+    #header #h1 a {
+      color: inherit; }
+  #header .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    background-image: url(http://www.publicdomainpictures.net/pictures/30000/velka/the-tree-on-the-bank.jpg);
+    background-position: top center;
+    background-size: cover; }
+    #header .top .container {
+      height: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative; }
+  #header #nav {
+    background-color: #2c3e50;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    #header #nav .container {
+      height: 40px;
+      margin: 0 auto;
+      max-width: 200px; }
+    #header #nav a {
+      display: block;
+      float: left;
+      color: inherit;
+      line-height: 40px;
+      width: 100px;
+      text-align: center;
+      font-weight: bold; }
+      #header #nav a:last-child:after {
+        display: block;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        color: transparent;
+        font-size: 0;
+        content: '.';
+        float: none;
+        clear: both; }
+
+#main > * > .container {
+  max-width: 1000px;
+  margin: 0 auto; }

@@ -7,15 +7,22 @@
     <title>{{ site.data.global.title }}</title>
     <link rel="stylesheet" href="./components/necolas-normalize.css/normalize.css"/>
     <link rel="stylesheet" href="./components/fortawesome-font-awesome/css/font-awesome.css"/>
+    <script type="text/javascript" src="./components/components-jquery/jquery.js"></script>
     <link rel="stylesheet" href="./gen/sass/default.css"/>
+    {% if page.path == "index.html" %}
+    <link rel="stylesheet" href="./gen/sass/home.css"/>
+    <script type="text/javascript" src="./gen/js/home.js"></script>
+    {% endif %}
   </head>
   <body>
     <div id="wrapper">
       <header id="header">
         <div class="top">
-          <h1>
-            <a href="{{ site.data.global.url }}">{{ site.data.global.title }}</a>
-          </h1>
+          <div class="container">
+            <h1 id="h1">
+              <a href="{{ site.data.global.url }}">{{ site.data.global.title }}</a>
+            </h1>
+          </div>
         </div>
         <nav id="nav">
           <div class="container">
@@ -25,12 +32,10 @@
         </nav>
       </header>
       <div id="main">
-        <div class="container">
-          {{ content }}
-        </div>
+        {{ content }}
       </div>
       <footer id="footer">
-        &copy; iXouk
+        2014 iXouk
       </footer>
     </div>
   </body>
