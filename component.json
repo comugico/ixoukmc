@@ -4,10 +4,10 @@
   "description": "",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
-  "development": {
+  "dependencies": {
     "FortAwesome/font-awesome": "*",
     "components/jquery": "*",
     "necolas/normalize.css": "*"
-  }
+  },
+  "development": {}
 }
