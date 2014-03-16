@@ -1,0 +1,13 @@
+{
+  "name": "ixoukmc",
+  "repo": "comugico/ixoukmc",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {
+    "FortAwesome/font-awesome": "*",
+    "components/jquery": "*",
+    "necolas/normalize.css": "*"
+  }
+}
